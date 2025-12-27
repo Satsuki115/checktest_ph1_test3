@@ -1,6 +1,11 @@
 /*==========================================================================
 # common
 ========================================================================== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 14px;
   line-height: 1.5;
@@ -38,16 +43,53 @@ body {
   background: #333;
 }
 
+
 /*==========================================================================
 # header
 ========================================================================== */
-
-
+header{
+  width:100%;
+  top:0;
+  position: fixed;
+  height:80px;
+  z-index:10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.menu{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap:40px;
+  font-size:14px;
+  margin-right: 160px;
+}
 /*==========================================================================
 # hero
 ========================================================================== */
+.container img{
+width:100%;
+margin-top:80px;
+height:400px;
+background-size: cover;
+position: relative;
+}
+.main-visual div{
+  position:absolute;
+  top:30%;
+  left:40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.main-visual p{
+  color:#fff;
+  font-size:48px;
 
-
+}
 /*==========================================================================
 # service
 ========================================================================== */
@@ -85,8 +127,70 @@ body {
 /*==========================================================================
 # news
 ========================================================================== */
+.news{
+  background-color: #fafafa;
+  width:100%;
+  height: 555px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.news h1{
+  font-size:36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:16px;
+}
+.news-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:24px;
+  width: 960px;
+  height: 331px;
 
 
+}
+.news-item{
+  background-color: #fff;
+  position: relative;
+  border-radius: 16px;
+  width: 300px;
+  height:340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  box-shadow: 2px 2px  #a5a5a5;
+
+}
+.news-item img{
+  border-radius: 16px 16px 0 0;
+  width: 300px;
+  height:170px;
+  object-fit: cover;
+
+}
+.news-detail{
+
+  margin-top:12px;
+  color:#a5a5a5;
+  font-size: 12px;
+  display: flex;
+  justify-content: left;
+
+}
+.news-text{
+  margin-top:12px;
+  font-size: 14px;
+  margin-left:24px;
+  display: flex;
+  justify-content: left;
+
+}
 /*==========================================================================
 # contact
 ========================================================================== */
@@ -167,4 +271,8 @@ body {
   font-size: 12px;
   text-align: center;
   padding: 12px;
+  position:fixed;
+  height:20px;
+  width:100%;
+  bottom:0;
 }
